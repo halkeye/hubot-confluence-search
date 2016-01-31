@@ -1,0 +1,17 @@
+{
+  "extends": [
+    "defaults",
+    "defaults/configurations/walmart/es6-node"
+  ],
+  "env": {
+    "node": true,
+    "es6": true
+  },
+  "rules": {
+    "filenames/filenames": 0,
+    "no-console": 0,
+    "prefer-template": 0,
+    "camelcase": [2, "never" ],
+    "quotes": [2, "double", "avoid-escape"]
+  }
+}

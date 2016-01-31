@@ -1,0 +1,45 @@
+{
+  "name": "hubot-confluence-search",
+  "version": "1.0.0",
+  "description": "Search confluence based on searchterm",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/halkeye/hubot-confluence-search.git"
+  },
+  "keywords": [
+    "hubot",
+    "confluence"
+  ],
+  "author": "Gavin Mogan <gavin@gavinmogan.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/halkeye/hubot-confluence-search/issues"
+  },
+  "homepage": "https://github.com/halkeye/hubot-confluence-search#readme",
+  "devDependencies": {
+    "co": "^4.6.0",
+    "coffee-script": "^1.10.0",
+    "eslint": "^1.10.3",
+    "eslint-config-defaults": "^8.0.2",
+    "eslint-plugin-filenames": "^0.2.0",
+    "hubot": "^2.18.0",
+    "hubot-test-helper": "^1.4.4",
+    "mocha": "^2.4.5",
+    "nock": "^7.0.2",
+    "object-assign": "^4.0.1",
+    "should": "^8.2.1",
+    "sinon": "^1.17.3",
+    "supertest": "^1.1.0"
+  },
+  "dependencies": {
+    "atlassian-confluence": "^2.0.1",
+    "bluebird": "^3.1.5",
+    "es6-promise": "^3.0.2",
+    "qs": "^6.0.2",
+    "request": "^2.69.0"
+  }
+}
