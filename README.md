@@ -10,9 +10,9 @@ Integration with [confluence](https://www.atlassian.com/software/confluence)'s s
 
 ## Configuration
 
-   HUBOT_SONARR_HOST - Confluence's base url (ie http://localhost:8080/confluence/)
-   HUBOT_SONARR_USERNAME - Confluence username
-   HUBOT_SONARR_PASSWORD - Confluence password
+* HUBOT_SONARR_HOST - Confluence's base url (ie http://localhost:8080/confluence/)
+* HUBOT_SONARR_USERNAME - Confluence username
+* HUBOT_SONARR_PASSWORD - Confluence password
 
 ## Release History
 
