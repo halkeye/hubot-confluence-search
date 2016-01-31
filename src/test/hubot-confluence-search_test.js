@@ -17,7 +17,7 @@ const confluence = new (require("../scripts/confluence.js"))("fake", "fake", "ht
 
 var room; //eslint-disable-line
 
-describe("hubot_confluence-search", () => {
+describe("hubot_confluence-search", function () {
   beforeEach(() => { room = scriptHelper.createRoom(); });
   afterEach(() => { room.destroy(); });
 
