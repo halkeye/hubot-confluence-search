@@ -5,9 +5,9 @@
 //   None
 //
 // Configuration:
-//   HUBOT_SONARR_HOST - Sonarr"s base url (ie http://localhost:8080/confluence/)
-//   HUBOT_SONARR_USERNAME - Confluence username
-//   HUBOT_SONARR_PASSWORD - password
+//   HUBOT_CONFLUENCE_HOST - Confluence's base url (ie http://localhost:8080/confluence/)
+//   HUBOT_CONFLUENCE_USERNAME - Confluence username
+//   HUBOT_CONFLUENCE_PASSWORD - password
 //
 // Commands:
 //   hubot wiki <term> - Search term to look up
