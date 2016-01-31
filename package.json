@@ -12,6 +12,7 @@
   },
   "keywords": [
     "hubot",
+    "hubot-scripts",
     "confluence"
   ],
   "author": "Gavin Mogan <gavin@gavinmogan.com>",
