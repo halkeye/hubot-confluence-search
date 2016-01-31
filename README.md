@@ -1,0 +1,2 @@
+# hubot-confluence-search
+
