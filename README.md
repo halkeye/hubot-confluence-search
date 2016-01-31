@@ -19,7 +19,7 @@ Integration with [confluence](https://www.atlassian.com/software/confluence)'s s
 1.0.0 -
 
  * Initial Version
- 
+
 
 ## License
 Copyright (c) 2016 Gavin Mogan
