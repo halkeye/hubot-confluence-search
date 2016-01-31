@@ -24,17 +24,17 @@ describe("hubot_confluence-search", () => {
   describe("help", () => {
     it("lists help", () => {
       room.robot.helpCommands().should.eql([
-        "wiki <term> - Search term to look up"
+        "hubot wiki <term> - Search term to look up"
       ]);
     });
   });
   describe("inline sentance", () => {
     beforeEach(() => {
-      return room.user.say("Shell", "aasdadasdasd wiki day one dev");
+      return room.user.say("Shell", "aasdadasdasd hubot wiki day one dev");
     });
-    it("wiki shouldn't work inline", () => {
+    it("hubot wiki shouldn't work inline", () => {
       room.messages.should.be.eql([
-        [ "Shell", "aasdadasdasd wiki day one dev" ]
+        [ "Shell", "aasdadasdasd hubot wiki day one dev" ]
       ]);
     });
   });
@@ -44,11 +44,11 @@ describe("hubot_confluence-search", () => {
       this.mock_confluence.expects("simpleSearch").once().returns(
         Promise.resolve({ results: [] })
       );
-      return room.user.say("Shell", "wiki aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+      return room.user.say("Shell", "hubot wiki aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
     });
-    it("wiki should output nothing on empty response", () => {
+    it("hubot wiki should output nothing on empty response", () => {
       room.messages.should.be.eql([
-        [ "Shell", "wiki aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" ],
+        [ "Shell", "hubot wiki aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" ],
         [ "hubot", "Nothing found" ]
       ]);
       this.mock_confluence.verify();
@@ -63,12 +63,12 @@ describe("hubot_confluence-search", () => {
           ]
         })
       );
-      return room.user.say("Shell", "wiki dev day one");
+      return room.user.say("Shell", "hubot wiki dev day one");
     });
 
-    it("wiki should output one result on single response", () => {
+    it("hubot wiki should output one result on single response", () => {
       room.messages.should.be.eql([
-        [ "Shell", "wiki dev day one" ],
+        [ "Shell", "hubot wiki dev day one" ],
         [ "hubot", "Results: \n * Dev Day One - " +
           process.env.HUBOT_CONFLUENCE_HOST + "x/wAKu" ]
       ]);
@@ -85,12 +85,12 @@ describe("hubot_confluence-search", () => {
           ]
         })
       );
-      return room.user.say("Shell", "wiki outage");
+      return room.user.say("Shell", "hubot wiki outage");
     });
 
-    it("wiki should output one result on multiple response", () => {
+    it("hubot wiki should output one result on multiple response", () => {
       room.messages.should.be.eql([
-        [ "Shell", "wiki outage" ],
+        [ "Shell", "hubot wiki outage" ],
         [ "hubot", "Results: \n " +
           "* Outage Procedure - " +
           process.env.HUBOT_CONFLUENCE_HOST + "x/NAyoAw" +

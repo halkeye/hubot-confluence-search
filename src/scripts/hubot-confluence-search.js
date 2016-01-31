@@ -10,7 +10,7 @@
 //   HUBOT_SONARR_PASSWORD - password
 //
 // Commands:
-//   wiki <term> - Search term to look up
+//   hubot wiki <term> - Search term to look up
 //
 // Notes:
 //   Copyright (c) 2016 Gavin Mogan
@@ -32,7 +32,7 @@ module.exports = function (robot) {
   robot.confluence_search = new require('./confluence.js')(username, password, host);
 
   //robot.parseHelp(__filename);
-  robot.hear(/^wiki\s*(.*)$/, function (res) {
+  robot.respond(/wiki\s*(.*)$/, function (res) {
     robot.confluence_search.simpleSearch(res.match[1]).then(function(results) {
       if (results.results.length === 0) {
         res.send( 'Nothing found' );
