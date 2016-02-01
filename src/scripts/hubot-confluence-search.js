@@ -39,7 +39,7 @@ module.exports = function (robot) {
         return;
       }
 
-      res.send( 'Results: ' + "\n" + results.results.map(function(result) {
+      res.send( results.results.map(function(result) {
           return " * " + result.title + " - " +  url.resolve(process.env.HUBOT_CONFLUENCE_HOST, result._links.tinyui);
       }).join("\n") );
     }).catch(function(err) {
