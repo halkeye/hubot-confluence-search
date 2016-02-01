@@ -14,7 +14,7 @@ module.exports = function(username, password, hostname) {
           json: true,
           qs: {
             limit: 5,
-            cql: 'type is page and (title ~ "' + str + '" or text ~ "' + str + '")'
+            cql: 'type = page and (text ~ "' + str + '" or title ~ "' + str + '")'
           },
           auth: {
             'user': username,
@@ -25,7 +25,7 @@ module.exports = function(username, password, hostname) {
           if (err) { return reject(err); }
           //Check for right status code
           if(response.statusCode !== 200) {
-            return reject('Invalid Status Code Returned:', response.statusCode);
+            return reject('Invalid Status Code Returned:' + response.statusCode);
           }
 
           if (!results) { return reject("empty result object"); }
