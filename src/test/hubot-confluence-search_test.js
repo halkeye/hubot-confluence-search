@@ -69,7 +69,7 @@ describe("hubot_confluence-search", function () {
     it("hubot wiki should output one result on single response", () => {
       room.messages.should.be.eql([
         [ "Shell", "hubot wiki dev day one" ],
-        [ "hubot", "Results: \n * Dev Day One - " +
+        [ "hubot", " * Dev Day One - " +
           process.env.HUBOT_CONFLUENCE_HOST + "x/wAKu" ]
       ]);
       this.mock_confluence.verify();
@@ -91,7 +91,7 @@ describe("hubot_confluence-search", function () {
     it("hubot wiki should output one result on multiple response", () => {
       room.messages.should.be.eql([
         [ "Shell", "hubot wiki outage" ],
-        [ "hubot", "Results: \n " +
+        [ "hubot", " " +
           "* Outage Procedure - " +
           process.env.HUBOT_CONFLUENCE_HOST + "x/NAyoAw" +
           "\n * Other Outage Procedure - " +
