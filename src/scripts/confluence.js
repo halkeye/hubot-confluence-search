@@ -14,7 +14,7 @@ module.exports = function(username, password, hostname) {
           json: true,
           qs: {
             limit: 5,
-            cql: 'type = page and (text ~ "' + str + '" or title ~ "' + str + '")'
+            cql: 'type = page and siteSearch ~ "' + str + '"'
           },
           auth: {
             'user': username,
