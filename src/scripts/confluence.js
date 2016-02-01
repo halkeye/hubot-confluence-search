@@ -14,7 +14,7 @@ module.exports = function(username, password, hostname) {
           json: true,
           qs: {
             limit: 5,
-            cql: 'title ~ "' + str + '"'
+            cql: 'type is page and title ~ "' + str + '"'
           },
           auth: {
             'user': username,
