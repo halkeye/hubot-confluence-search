@@ -20,7 +20,7 @@ hubot wiki <term> - Search term to look up
 
 ## Release History
 
-1.0.0 -
+1.0.0 - Feb 4 2016
 
  * Initial Version
 
