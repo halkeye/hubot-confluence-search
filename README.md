@@ -8,11 +8,15 @@ Integration with [confluence](https://www.atlassian.com/software/confluence)'s s
 1. Install the module: `npm install --save hubot-confluence-search`
 2. Add it `hubot-confluence-search` to your external-scripts.json file in your hubot directory
 
+## Commands
+
+hubot wiki <term> - Search term to look up
+
 ## Configuration
 
-* HUBOT_SONARR_HOST - Confluence's base url (ie http://localhost:8080/confluence/)
-* HUBOT_SONARR_USERNAME - Confluence username
-* HUBOT_SONARR_PASSWORD - Confluence password
+* HUBOT_CONFLUENCE_HOST - Confluence's base url (ie http://localhost:8080/confluence/)
+* HUBOT_CONFLUENCE_USERNAME - Confluence username
+* HUBOT_CONFLUENCE_PASSWORD - Confluence password
 
 ## Release History
 
