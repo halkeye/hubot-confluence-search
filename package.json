@@ -1,6 +1,6 @@
 {
   "name": "hubot-confluence-search",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Search confluence based on searchterm",
   "main": "index.js",
   "scripts": {
