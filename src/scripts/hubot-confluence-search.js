@@ -8,6 +8,7 @@
 //   HUBOT_CONFLUENCE_HOST - Confluence's base url (ie http://localhost:8080/confluence/)
 //   HUBOT_CONFLUENCE_USERNAME - Confluence username
 //   HUBOT_CONFLUENCE_PASSWORD - password
+//   HUBOT_CONFLUENCE_SEARCH_SPACE - Specify to search within a single space only
 //
 // Commands:
 //   hubot wiki <term> - Search term to look up
@@ -39,8 +40,6 @@ module.exports = function (robot) {
       query = 'space = "' + space + '" and ';
     }
     query = query + 'text ~ "' + res.match[1] + '"';
-
-    console.log("Running confluence query: " + query);
 
     robot.confluence_search.simpleSearch(query).then(function(results) {
       if (results.results.length === 0) {
