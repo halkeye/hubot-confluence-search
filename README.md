@@ -21,6 +21,10 @@ hubot wiki <term> - Search term to look up
 
 ## Release History
 
+1.1.0 - Oct 20, 2016
+
+* Added ability to search a single space
+
 1.0.0 - Feb 4 2016
 
  * Initial Version
