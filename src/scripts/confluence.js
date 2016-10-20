@@ -6,7 +6,7 @@ var url = require('url');
 module.exports = function(username, password, hostname) {
   var uri = url.resolve(hostname, '/rest/api/content/search');
   return {
-    simpleSearch: function(str) {
+    simpleSearch: function(cql) {
       return new Promise(function(resolve, reject) {
         request({
           method: 'GET',
@@ -14,7 +14,7 @@ module.exports = function(username, password, hostname) {
           json: true,
           qs: {
             limit: 5,
-            cql: 'type = page and siteSearch ~ "' + str + '"'
+            cql : cql
           },
           auth: {
             'user': username,
@@ -25,7 +25,8 @@ module.exports = function(username, password, hostname) {
           if (err) { return reject(err); }
           //Check for right status code
           if(response.statusCode !== 200) {
-            return reject('Invalid Status Code Returned:' + response.statusCode);
+            var bod = JSON.stringify(response.body);
+            return reject('Invalid Status Code Returned: ' + response.statusCode + ' - ' + response.body.message);
           }
 
           if (!results) { return reject("empty result object"); }
