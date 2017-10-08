@@ -17,8 +17,13 @@ hubot wiki <term> - Search term to look up
 * HUBOT_CONFLUENCE_HOST - Confluence's base url (ie http://localhost:8080/confluence/)
 * HUBOT_CONFLUENCE_USERNAME - Confluence username
 * HUBOT_CONFLUENCE_PASSWORD - Confluence password
+* HUBOT_CONFLUENCE_SEARCH_SPACE - Specify to search within a single space only
 
 ## Release History
+
+1.1.0 - Oct 20, 2016
+
+* Added ability to search a single space
 
 1.0.0 - Feb 4 2016
 

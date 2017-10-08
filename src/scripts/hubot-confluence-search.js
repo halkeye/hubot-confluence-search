@@ -8,6 +8,7 @@
 //   HUBOT_CONFLUENCE_HOST - Confluence's base url (ie http://localhost:8080/confluence/)
 //   HUBOT_CONFLUENCE_USERNAME - Confluence username
 //   HUBOT_CONFLUENCE_PASSWORD - password
+//   HUBOT_CONFLUENCE_SEARCH_SPACE - Specify to search within a single space only
 //
 // Commands:
 //   hubot wiki <term> - Search term to look up
@@ -24,16 +25,23 @@ var url = require("url");
 
 var username = process.env.HUBOT_CONFLUENCE_USERNAME;
 var password = process.env.HUBOT_CONFLUENCE_PASSWORD;
+var space = process.env.HUBOT_CONFLUENCE_SEARCH_SPACE;
 var host = process.env.HUBOT_CONFLUENCE_HOST;
 
 var uri = url.resolve(host, '/rest/api/content/search');
 
 module.exports = function (robot) {
   robot.confluence_search = new require('./confluence.js')(username, password, host);
-
   //robot.parseHelp(__filename);
   robot.respond(/wiki\s*(.*)$/, function (res) {
-    robot.confluence_search.simpleSearch(res.match[1]).then(function(results) {
+
+    var query = ''
+    if (space) {
+      query = 'space = "' + space + '" and ';
+    }
+    query = query + 'text ~ "' + res.match[1] + '"';
+
+    robot.confluence_search.simpleSearch(query).then(function(results) {
       if (results.results.length === 0) {
         res.send( 'Nothing found' );
         return;
