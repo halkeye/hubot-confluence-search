@@ -29,7 +29,7 @@
     "eslint-config-defaults": "^9.0.0",
     "eslint-plugin-filenames": "^1.1.0",
     "hubot": "^2.18.0",
-    "hubot-test-helper": "^1.4.4",
+    "hubot-test-helper": "^1.8.1",
     "mocha": "^4.0.0",
     "nock": "^9.0.0",
     "should": "^13.0.0",
