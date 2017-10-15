@@ -17,6 +17,8 @@ const confluence = new (require("../scripts/confluence.js"))("fake", "fake", "ht
 
 var room; //eslint-disable-line
 
+const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
 describe("hubot_confluence-search", function () {
   beforeEach(() => { room = scriptHelper.createRoom(); });
   afterEach(() => { room.destroy(); });
@@ -30,7 +32,7 @@ describe("hubot_confluence-search", function () {
   });
   describe("inline sentance", () => {
     beforeEach(() => {
-      return room.user.say("Shell", "aasdadasdasd hubot wiki day one dev");
+      return room.user.say("Shell", "aasdadasdasd hubot wiki day one dev").then(() => sleep(25));;
     });
     it("hubot wiki shouldn't work inline", () => {
       room.messages.should.be.eql([
@@ -44,7 +46,7 @@ describe("hubot_confluence-search", function () {
       this.mock_confluence.expects("simpleSearch").once().returns(
         Promise.resolve({ results: [] })
       );
-      return room.user.say("Shell", "hubot wiki aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+      return room.user.say("Shell", "hubot wiki aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa").then(() => sleep(25));;
     });
     it("hubot wiki should output nothing on empty response", () => {
       room.messages.should.be.eql([
@@ -63,7 +65,7 @@ describe("hubot_confluence-search", function () {
           ]
         })
       );
-      return room.user.say("Shell", "hubot wiki dev day one");
+      return room.user.say("Shell", "hubot wiki dev day one").then(() => sleep(25));;
     });
 
     it("hubot wiki should output one result on single response", () => {
@@ -85,7 +87,7 @@ describe("hubot_confluence-search", function () {
           ]
         })
       );
-      return room.user.say("Shell", "hubot wiki outage");
+      return room.user.say("Shell", "hubot wiki outage").then(() => sleep(25));
     });
 
     it("hubot wiki should output one result on multiple response", () => {
