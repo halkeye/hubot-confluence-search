@@ -1,6 +1,6 @@
 # hubot-confluence-search
 
-[![Build Status](https://travis-ci.org/halkeye/hubot-confluence-search.png)](https://travis-ci.org/halkeye/hubot-sonarr)
+[![Build Status](https://travis-ci.org/halkeye/hubot-confluence-search.png)](https://travis-ci.org/halkeye/hubot-confluence-search)
 
 Integration with [confluence](https://www.atlassian.com/software/confluence)'s search functionality.
 
