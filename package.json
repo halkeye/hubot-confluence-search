@@ -33,7 +33,7 @@
     "mocha": "^5.0.0",
     "nock": "^9.1.5",
     "should": "^13.1.2",
-    "sinon": "^4.1.3"
+    "sinon": "^4.2.1"
   },
   "dependencies": {
     "es6-promise": "^4.0.3",
