@@ -1,6 +1,6 @@
 # hubot-confluence-search
 
-[![Build Status](https://travis-ci.org/halkeye/hubot-confluence-search.png)](https://travis-ci.org/halkeye/hubot-confluence-search)
+[![Build Status](https://travis-ci.org/halkeye/hubot-confluence-search.png)](https://travis-ci.org/halkeye/hubot-confluence-search) [![Greenkeeper badge](https://badges.greenkeeper.io/halkeye/hubot-confluence-search.svg)](https://greenkeeper.io/)
 
 Integration with [confluence](https://www.atlassian.com/software/confluence)'s search functionality.
 
