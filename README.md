@@ -1,3 +1,5 @@
+# Migrated to https://github.com/halkeye/hubot-plugins/tree/master/packages/hubot-confluence-search
+
 # hubot-confluence-search
 
 [![Build Status](https://travis-ci.org/halkeye/hubot-confluence-search.png)](https://travis-ci.org/halkeye/hubot-confluence-search) [![Greenkeeper badge](https://badges.greenkeeper.io/halkeye/hubot-confluence-search.svg)](https://greenkeeper.io/)
